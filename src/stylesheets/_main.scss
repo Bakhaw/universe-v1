@@ -1,0 +1,24 @@
+.AppContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+    background-color: var(--purple);
+    height: 100vh;
+}
+
+.AppBar {
+    z-index: 100;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    width: 45px;
+    border-radius: 40px 0 0 40px;
+    background-color: var(--green);
+    transition: 0.3s;
+    &:hover {
+        width: 65px;
+        transition: 0.3s;
+    }
+}

@@ -1,0 +1,42 @@
+* {
+    font-family: "Rubik", sans-serif;
+    font-weight: normal;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    &:before {
+        content: "";
+        height: 600px;
+        width: 600px;
+        border-radius: 100%;
+        background-color: var(--dark-orange);
+        position: absolute;
+        top: 50px;
+        left: -250px;
+    }
+    &:after {
+        content: "";
+        height: 800px;
+        width: 800px;
+        border-radius: 100%;
+        background-color: var(--blue);
+        position: absolute;
+        bottom: -200px;
+        right: -350px;
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+span {
+    display: block;
+}

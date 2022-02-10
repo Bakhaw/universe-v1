@@ -1,0 +1,52 @@
+.SkillsCard {
+    z-index: 100;
+    display: flex;
+    border-radius: 20px;
+    background-color: var(--orange);
+    backdrop-filter: blur(25px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    color: var(--dark-blue);
+    max-height: 420px;
+    width: calc(660px - 60px);
+    &__techSkills {
+        overflow-y: scroll;
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: var(--dark-orange);
+        gap: 24px;
+        margin-left: 30px;
+        li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__content {
+        padding: 12px 30px;
+    }
+    &__title {
+        font-family: "Rozha One", serif;
+        font-size: 34px;
+        margin: 0;
+    }
+    &__description {
+        font-size: 18px;
+    }
+    &__softSkills-title {
+        font-size: 16px;
+        margin: 4px 0;
+    }
+    &__softSkills {
+        margin-left: 12px;
+        li {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 8px;
+        }
+    }
+}
