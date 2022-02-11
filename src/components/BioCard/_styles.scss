@@ -11,6 +11,9 @@
     position: relative;
     height: 420px;
     width: 560px;
+    @include md {
+        margin-top: 150px;
+    }
     &__avatar {
         position: absolute;
         top: -135px;

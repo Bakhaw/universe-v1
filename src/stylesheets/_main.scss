@@ -2,9 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 56px;
     background-color: var(--purple);
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .AppBar {

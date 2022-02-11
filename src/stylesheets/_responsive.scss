@@ -1,0 +1,6 @@
+$screen-md-max: 1200px;
+@mixin md {
+    @media (max-width: #{$screen-md-max}) {
+        @content;
+    }
+}
