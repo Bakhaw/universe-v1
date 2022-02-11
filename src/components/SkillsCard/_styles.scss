@@ -1,56 +1,122 @@
 .SkillsCard {
-    z-index: 100;
+  z-index: 100;
+  display: flex;
+  max-height: 420px;
+  width: calc(
+    660px - 130px
+  ); // 130px = SkillsCard padding-left: 70px + &__content padding left-right: 60px
+  padding-left: 70px;
+  border-radius: 20px;
+  background-color: var(--orange);
+  backdrop-filter: blur(25px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  color: var(--dark-blue);
+
+  &__techSkills {
+    position: absolute;
+    top: -20px;
+    bottom: -20px;
+    left: 0;
+    overflow: hidden;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+    padding: 8px;
+    background-color: var(--dark-orange);
     border-radius: 20px;
-    background-color: var(--orange);
-    backdrop-filter: blur(25px);
-    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-    color: var(--dark-blue);
-    max-height: 420px;
-    width: calc(660px - 60px);
-    @include md {
-        max-height: unset;
-        width: calc(375px - 60px);
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      text-align: center;
+
+      img {
+        width: 42px;
+      }
+
+      span {
+        font-size: 14px;
+      }
     }
+  }
+
+  &__content {
+    padding: 12px 30px;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: "Rozha One", serif;
+    font-size: 34px;
+  }
+
+  &__description {
+    font-size: 18px;
+  }
+
+  &__softSkills-title {
+    margin: 4px 0;
+    font-size: 16px;
+  }
+
+  &__softSkills {
+    margin-left: 12px;
+
+    li {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+    }
+  }
+}
+
+@include md {
+  .SkillsCard {
+    padding-left: 0;
+    padding-top: 100px;
+    max-height: 100%;
+    width: 350px;
+
     &__techSkills {
-        overflow-y: scroll;
-        width: 220px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        background-color: var(--dark-orange);
-        gap: 24px;
-        margin-left: 30px;
-        li {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+      position: absolute;
+      top: 0;
+      bottom: unset;
+      left: -20px;
+      right: -20px;
+      flex-direction: row;
+      width: auto;
+      margin-left: 0;
+      gap: 64px;
+      padding: 8px 16px;
     }
+
     &__content {
-        padding: 12px 30px;
+      padding: 12px;
     }
+
     &__title {
-        font-family: "Rozha One", serif;
-        font-size: 34px;
-        margin: 0;
+      font-size: 29px;
     }
+
     &__description {
-        font-size: 18px;
+      font-size: 16px;
     }
+
     &__softSkills-title {
-        font-size: 16px;
-        margin: 4px 0;
+      font-size: 14px;
     }
+
     &__softSkills {
-        margin-left: 12px;
-        li {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 8px;
-        }
+      li {
+        font-size: 14px;
+      }
     }
+  }
 }

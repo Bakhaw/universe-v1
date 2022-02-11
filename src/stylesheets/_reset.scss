@@ -1,46 +1,57 @@
 * {
-    font-family: "Rubik", sans-serif;
-    font-weight: normal;
+  font-family: "Rubik", sans-serif;
+  font-weight: normal;
 }
 
 body {
-    background-color: var(--purple);
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    &:before {
-        content: "";
-        height: 600px;
-        width: 600px;
-        border-radius: 100%;
-        background-color: var(--dark-orange);
-        position: absolute;
-        top: 50px;
-        left: -250px;
-    }
-    &:after {
-        content: "";
-        height: 800px;
-        width: 800px;
-        border-radius: 100%;
-        background-color: var(--blue);
-        position: absolute;
-        bottom: -250px;
-        right: -350px;
-    }
+  overflow: hidden;
+  background-color: var(--purple);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include md {
+    overflow-y: unset;
+  }
+
+  &:before {
+    content: "";
+    height: 600px;
+    width: 600px;
+    border-radius: 100%;
+    background-color: var(--dark-orange);
+    position: absolute;
+    top: 50px;
+    left: -250px;
+
     @include md {
-        overflow-y: unset;
+      display: none;
     }
+  }
+
+  &:after {
+    content: "";
+    height: 800px;
+    width: 800px;
+    border-radius: 100%;
+    background-color: var(--blue);
+    position: absolute;
+    bottom: -250px;
+    right: -350px;
+
+    @include md {
+      display: none;
+    }
+  }
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 span {
-    display: block;
+  display: block;
 }
