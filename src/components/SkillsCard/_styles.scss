@@ -8,6 +8,10 @@
     color: var(--dark-blue);
     max-height: 420px;
     width: calc(660px - 60px);
+    @include md {
+        max-height: unset;
+        width: calc(375px - 60px);
+    }
     &__techSkills {
         overflow-y: scroll;
         width: 220px;

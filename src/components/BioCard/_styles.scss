@@ -13,6 +13,7 @@
     width: 560px;
     @include md {
         margin-top: 150px;
+        width: 375px;
     }
     &__avatar {
         position: absolute;
