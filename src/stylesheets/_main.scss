@@ -2,38 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 86px;
+  gap: 26px;
   min-height: 100vh;
+  padding: 24px 0;
 
   @include md {
     flex-direction: column;
-  }
-}
-
-.AppBar {
-  z-index: 100;
-  cursor: pointer;
-  position: absolute;
-  right: 0;
-  height: 100vh;
-  width: 45px;
-  border-radius: 40px 0 0 40px;
-  background-color: var(--green);
-  transition: 0.3s;
-
-  @include md {
-    position: unset;
-    height: 45px;
-    width: 100%;
-    border-radius: 20px 20px 0 0;
-  }
-
-  &:hover {
-    width: 65px;
-    transition: 0.3s;
-
-    @include md {
-      width: 100%;
-    }
+    gap: 86px;
   }
 }

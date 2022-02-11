@@ -6,7 +6,6 @@ function App() {
     <div className="AppContainer">
       <BioCard />
       <SkillsCard />
-      <div className="AppBar" />
     </div>
   );
 }

@@ -1,22 +1,22 @@
 .SkillsCard {
   z-index: 100;
+  position: relative;
   display: flex;
-  max-height: 420px;
+  height: 380px;
   width: calc(
-    660px - 130px
-  ); // 130px = SkillsCard padding-left: 70px + &__content padding left-right: 60px
-  padding-left: 70px;
+    660px - 140px
+  ); // 140px = SkillsCard padding-left: 80px + &__content padding left-right: 60px
+  padding-left: 80px;
   border-radius: 20px;
   background-color: var(--orange);
   backdrop-filter: blur(25px);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
   color: var(--dark-blue);
 
   &__techSkills {
     position: absolute;
     top: -20px;
     bottom: -20px;
-    left: 0;
+    left: 30px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -40,28 +40,32 @@
       }
 
       span {
-        font-size: 14px;
+        font-size: 0.75rem;
       }
     }
   }
 
   &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     padding: 12px 30px;
   }
 
   &__title {
     margin: 0;
     font-family: "Rozha One", serif;
-    font-size: 34px;
+    font-size: 2rem;
   }
 
   &__description {
-    font-size: 18px;
+    font-size: 1rem;
   }
 
   &__softSkills-title {
-    margin: 4px 0;
-    font-size: 16px;
+    margin: 0;
+    font-size: 0.875rem;
+    font-style: italic;
   }
 
   &__softSkills {
@@ -72,21 +76,21 @@
       justify-content: flex-start;
       align-items: center;
       gap: 8px;
-      font-size: 16px;
+      font-size: 0.875rem;
+      font-style: italic;
     }
   }
 }
 
 @include md {
   .SkillsCard {
-    padding-left: 0;
-    padding-top: 100px;
+    padding: 120px 16px 16px 0;
     max-height: 100%;
     width: 350px;
 
     &__techSkills {
       position: absolute;
-      top: 0;
+      top: 16px;
       bottom: unset;
       left: -20px;
       right: -20px;

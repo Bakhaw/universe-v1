@@ -7,9 +7,8 @@
   border-radius: 20px;
   background-color: var(--green);
   backdrop-filter: blur(25px);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
   position: relative;
-  height: 420px;
+  height: 380px;
   width: 560px;
 
   &__avatar {
@@ -24,12 +23,12 @@
 
     &__title {
       font-family: "Rozha One", serif;
-      font-size: 49px;
+      font-size: 3rem;
     }
 
     &__subtitle {
-      font-size: 26px;
-      line-height: 12px;
+      font-size: 1.625rem;
+      line-height: 0.5rem;
     }
   }
 
@@ -53,7 +52,7 @@
 
 @include md {
   .BioCard {
-    margin-top: 150px; // prevents the avatar from going outside the body
+    margin-top: 100px; // prevents the avatar from going outside the body
     height: 320px;
     width: 350px;
 

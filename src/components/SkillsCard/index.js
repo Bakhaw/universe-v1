@@ -77,22 +77,24 @@ function SkillsCard() {
         <p className="SkillsCard__description">
           Grand passionné du code et du JavaScript, en relation sérieuse avec
           React depuis 4 ans sans que la flamme ne se soit jamais éteinte.
-        </p>
-        <p className="SkillsCard__description">
+          <br />
+          <br />
           Parti un peu plus tard que les autres sur la ligne de départ, cela a
           forgé mon autonomie et m'a donné les clés pour apprendre seul,
           efficacement et rapidement.
         </p>
 
-        <h3 className="SkillsCard__softSkills-title">Ce qu'on dit de moi</h3>
-        <ul className="SkillsCard__softSkills">
-          {softSkills.map((skill, i) => (
-            <li key={i}>
-              <img alt={skill.alt} src={skill.icon} />
-              <span>{skill.text}</span>
-            </li>
-          ))}
-        </ul>
+        <div>
+          <h3 className="SkillsCard__softSkills-title">Ce qu'on dit de moi</h3>
+          <ul className="SkillsCard__softSkills">
+            {softSkills.map((skill, i) => (
+              <li key={i}>
+                <img alt={skill.alt} src={skill.icon} />
+                <span>{skill.text}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
