@@ -2,10 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 56px;
-    background-color: var(--purple);
+    gap: 86px;
     min-height: 100vh;
+    @include md {
+        flex-direction: column;
+    }
 }
 
 .AppBar {
@@ -18,8 +19,17 @@
     border-radius: 40px 0 0 40px;
     background-color: var(--green);
     transition: 0.3s;
+    @include md {
+        position: unset;
+        height: 45px;
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+    }
     &:hover {
         width: 65px;
         transition: 0.3s;
+        @include md {
+            width: 100%;
+        }
     }
 }

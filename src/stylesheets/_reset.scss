@@ -4,6 +4,7 @@
 }
 
 body {
+    background-color: var(--purple);
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -28,6 +29,9 @@ body {
         position: absolute;
         bottom: -250px;
         right: -350px;
+    }
+    @include md {
+        overflow-y: unset;
     }
 }
 
